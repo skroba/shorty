@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_start();?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,19 +17,19 @@
     </div>
 
     <div class="container">
-   <?php if(isset($_SESSION['shortcut'])){
-     echo "Vas link je:http://www.shorty.test/" .$_SESSION['shortcut'];
-   
-     unset($_SESSION['shortcut']);
-   }else{
-     echo "<p>Unesite validan link ispod</p>";
-   
-      }
-    ?>
+   <?php if (isset($_SESSION['shortcut'])) {
+    echo "Vas link je: shorty.test/" . $_SESSION['shortcut'];
+
+    unset($_SESSION['shortcut']);
+} else {
+    echo "<p>Unesite validan link ispod</p>";
+
+}
+?>
     <hr>
       <form action="generate.php" method="POST">
           <div class="form-group">
-            
+
             <input type="text" name="url" class="form-control" id="sitelink" aria-describedby="sitelink" placeholder="Enter URL">
           </div>
           <button  type="submit" class="btn btn-primary">Generate URL</button>
